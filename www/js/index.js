@@ -43,7 +43,8 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-        location.href="http://1.weishequserver.duapp.com/";
+        alert("测试跳转");
+        location.href="spec.html";
 
         console.log('Received Event: ' + id);
     }
