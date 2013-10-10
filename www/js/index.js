@@ -54,7 +54,7 @@ var app = {
         location.href="http://1.weishequserver.duapp.com/";
 
         console.log('Received Event: ' + id);
-    }
+    },
     function aa(){
     		console.log("111");
     	}
