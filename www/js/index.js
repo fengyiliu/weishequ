@@ -19,6 +19,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
+    		window.alert = navigator.notification.alert
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -40,7 +41,8 @@ var app = {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
-
+        alert(11);
+				navigator.notification.alert("aaaaa", null, "Title", "Button Text");
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
         navigator.notification.alert("测试跳转", function(){}, "Title", "Button Text");
