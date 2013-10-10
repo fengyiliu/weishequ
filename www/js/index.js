@@ -19,7 +19,6 @@
 var app = {
     // Application Constructor
     initialize: function() {
-    		window.alert = navigator.notification.alert
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -34,6 +33,12 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+    	navigator.notification.alert(
+					'Alert Mesage!',
+					aa,
+					'Alert Title',
+					'Alert Button'
+					);
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
@@ -41,17 +46,16 @@ var app = {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
-        alert(11);
-				navigator.notification.alert("aaaaa", null, "Title", "Button Text");
+
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-        navigator.notification.alert("测试跳转", function(){}, "Title", "Button Text");
-        navigator.notification.alert("http://1.weishequserver.duapp.com/", function(){}, "Title", "Button Text");
-        window.open("http://1.weishequserver.duapp.com/");
-        return;
+				return;
 
         location.href="http://1.weishequserver.duapp.com/";
 
         console.log('Received Event: ' + id);
     }
+    function aa(){
+    		console.log("111");
+    	}
 };
