@@ -43,10 +43,11 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-        alert("测试跳转");
-        alert("http://1.weishequserver.duapp.com/");
-        return;
+        navigator.notification.alert("测试跳转", function(){}, "Title", "Button Text");
+        navigator.notification.alert("http://1.weishequserver.duapp.com/", function(){}, "Title", "Button Text");
         window.open("http://1.weishequserver.duapp.com/");
+        return;
+
         location.href="http://1.weishequserver.duapp.com/";
 
         console.log('Received Event: ' + id);
